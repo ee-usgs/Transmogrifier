@@ -90,7 +90,7 @@ public class JMSAdaptor {
 		return message;
 	}
 	
-	public Message toMessage(DocumentEnd docStart, Session session) throws JMSException {
+	public Message toMessage(DocumentEnd docEnd, Session session) throws JMSException {
 		Message message = session.createMessage();
 		message.setStringProperty(TYPE_HEADER_NAME, DOCUMENT_END_TYPE);
 		return message;
