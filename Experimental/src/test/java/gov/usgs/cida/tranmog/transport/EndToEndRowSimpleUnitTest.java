@@ -1,13 +1,10 @@
 package gov.usgs.cida.tranmog.transport;
 
 
-import gov.usgs.cida.mock.MessageStub;
-import gov.usgs.cida.mock.TextMessageStub;
 import gov.usgs.cida.tranmog.rowcol.*;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.util.logging.Level;
 import javax.jms.Connection;
 import javax.jms.DeliveryMode;
 import javax.jms.Destination;
@@ -24,7 +21,6 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.junit.After;
 import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.Before;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,8 +29,8 @@ import org.slf4j.LoggerFactory;
  *
  * @author eeverman
  */
-public class EndToEndRowColumnUnitTest {
-	private static final Logger log = LoggerFactory.getLogger(EndToEndRowColumnUnitTest.class);
+public class EndToEndRowSimpleUnitTest {
+	private static final Logger log = LoggerFactory.getLogger(EndToEndRowSimpleUnitTest.class);
     BrokerService broker = null;
 	
 

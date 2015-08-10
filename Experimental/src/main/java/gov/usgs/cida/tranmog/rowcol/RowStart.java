@@ -10,7 +10,7 @@ import java.io.Serializable;
  * 
  * @author eeverman
  */
-public class RowStart implements Serializable {
+public class RowStart implements RowColElement {
 
 	private long sourceIndex = -1;
 	
@@ -23,6 +23,11 @@ public class RowStart implements Serializable {
 	
 	public long getSourceIndex() {
 		return sourceIndex;
+	}
+	
+	@Override
+	public long getCharacterCount() {
+		return 0L;
 	}
 	
 }

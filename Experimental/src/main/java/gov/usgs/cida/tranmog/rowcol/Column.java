@@ -6,7 +6,7 @@ import java.io.Serializable;
  *
  * @author eeverman
  */
-public class Column implements Serializable {
+public class Column implements RowColElement {
 
 	private long sourceIndex = -1;
 	private String value;
@@ -26,6 +26,15 @@ public class Column implements Serializable {
 
 	public String getValue() {
 		return value;
+	}
+	
+	@Override
+	public long getCharacterCount() {
+		if (value != null) {
+			return value.length();
+		} else {
+			return 0L;
+		}
 	}
 	
 }

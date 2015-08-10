@@ -7,9 +7,14 @@ import java.io.Serializable;
  * 
  * @author eeverman
  */
-public class DocumentStart implements Serializable {
+public class DocumentStart implements RowColElement {
 	
 	public DocumentStart() {
+	}
+	
+	@Override
+	public long getCharacterCount() {
+		return 0L;
 	}
 	
 }
